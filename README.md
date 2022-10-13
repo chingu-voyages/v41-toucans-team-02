@@ -14,4 +14,5 @@ in your `readme` feel free to replace the text we've provided here.
 > Own it & Make it your Own!
 
 *03.10.22 created the initial template - Maxi
+
 *13.10.22 Added new h1 header - Maxi
