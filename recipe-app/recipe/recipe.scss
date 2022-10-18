@@ -1,0 +1,74 @@
+$cornflower-blue: #000080;
+$white: #fff;
+
+.recipe__wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  gap: 4rem;
+}
+
+.recipe__image__wrapper {
+  img {
+    max-inline-size: 100%;
+    block-size: auto;
+    object-fit: cover;
+    object-position: center center;
+    width: 100%;
+    aspect-ratio: 3/2;
+  }
+}
+
+.recipe__description {
+  padding: 2rem;
+  h1 {
+    text-align: center;
+    padding: 2rem;
+  }
+  ul {
+    list-style: none;
+    padding: 2rem 0;
+    li {
+      padding: 0.5rem 0;
+    }
+  }
+  span {
+    color: $cornflower-blue;
+    padding: 1rem;
+  }
+}
+
+.recipe__tags {
+  display: flex;
+  flex-wrap: row wrap;
+  justify-content: center;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  div {
+    background-color: $cornflower-blue;
+    color: $white;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+  }
+}
+
+.recipe__additionalInformation {
+  display: flex;
+  flex-wrap: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.recipe__instruction {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem;
+  a {
+    text-decoration: none;
+    color: $cornflower-blue;
+  }
+}
