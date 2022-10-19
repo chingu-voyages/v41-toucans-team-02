@@ -6,7 +6,6 @@ const searchInput = document.getElementById("searchBar");
 
 searchInput.addEventListener("change" , e => {
     const value = e.target.value
-    console.log(value)
     const options = {
         method: 'GET',
         headers: {
