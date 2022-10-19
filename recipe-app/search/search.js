@@ -4,7 +4,7 @@ import "../style.css"
 
 const searchInput = document.getElementById("searchBar");
 
-searchInput.addEventListener("input" , e => {
+searchInput.addEventListener("change" , e => {
     const value = e.target.value
     console.log(value)
     const options = {
@@ -18,6 +18,7 @@ searchInput.addEventListener("input" , e => {
     fetch(`https://edamam-recipe-search.p.rapidapi.com/search?q=${value}`, options)
         .then(response => response.json())
         .then(data => {
+            
             for (let i = 0; i < 9; i++) {
 
                 const recipeLabel = data.hits[i].recipe.label
