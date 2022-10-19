@@ -15,5 +15,9 @@
   },
   "dependencies": {
     "eslint": "^8.25.0"
-  }
+  },
+  "main": "main.js",
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
