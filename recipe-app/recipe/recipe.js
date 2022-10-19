@@ -13,12 +13,10 @@ const hashId = location.hash.substring(1);
 
 export const fetchRecipeById = async function () {
   try {
-    const baseURL = `https://api.edamam.com/api/recipes/v2/${hashId}?type=public&app_id=${API_ID}&app_key=${API_KEY}&from=0&to=20`;
+    const baseURL = `https://api.edamam.com/api/recipes/v2/${hashId}?type=public&app_id=${API_ID}&app_key=${API_KEY}`;
     const response = await fetch(baseURL);
     const data = await response.json();
     renderRecipe(data);
-    console.log(data);
-    console.log(data.recipe.ingredientLines);
   } catch (error) {
     throw error;
   }

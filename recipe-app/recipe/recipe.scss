@@ -5,9 +5,8 @@ $white: #fff;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: center;
-  padding: 4rem 2rem;
-  gap: 4rem;
+  padding: 2rem;
+  gap: 2rem;
 }
 
 .recipe__image__wrapper {
@@ -18,18 +17,21 @@ $white: #fff;
     object-position: center center;
     width: 100%;
     aspect-ratio: 3/2;
+    @media (min-width: 420px) {
+      height: 100%;
+    }
   }
 }
 
 .recipe__description {
-  padding: 2rem;
+  text-align: center;
   h1 {
-    text-align: center;
     padding: 2rem;
   }
   ul {
     list-style: none;
-    padding: 2rem 0;
+    padding: 2rem;
+
     li {
       padding: 0.5rem 0;
     }
@@ -44,7 +46,8 @@ $white: #fff;
   display: flex;
   flex-wrap: row wrap;
   justify-content: center;
-  padding: 1rem 2rem;
+  align-items: center;
+  padding: 0rem 4rem;
   gap: 1rem;
   div {
     background-color: $cornflower-blue;
@@ -59,7 +62,6 @@ $white: #fff;
   flex-wrap: row wrap;
   justify-content: center;
   align-items: center;
-  padding: 1rem 0;
 }
 
 .recipe__instruction {
