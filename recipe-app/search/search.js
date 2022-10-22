@@ -56,7 +56,7 @@ function showRecipe() {
     viewOneRecipe.style.display = 'block'
     let recipeName = this.innerText;
     let image;
-    let recipeLabel;
+    let recipeHeader;
     let calories;
     let cuisine;
     let mealType;
@@ -66,26 +66,31 @@ function showRecipe() {
 
     for (let index = 0; index < allRecipes.length; index++) {
         let oneRecipe = allRecipes[index];
-        recipeLabel = allRecipes[index].label
+        let recipeLabel = allRecipes[index].label;
       if (recipeName === recipeLabel) {
-        image = oneRecipe.image
+        image = oneRecipe.image;
+        recipeHeader = oneRecipe.label;
         calories = Math.floor(oneRecipe.calories);
         cuisine = oneRecipe.cuisineType[0];
         mealType = oneRecipe.mealType[0];
-        weight = Math.floor(oneRecipe.totalWeight)
+        weight = Math.floor(oneRecipe.totalWeight);
         let ingredientsArr = oneRecipe.ingredientLines;
-        ingredientsArr.forEach(ingredientArr => ingredient.push(ingredientArr));
+        ingredientsArr.forEach((ingredientArr) =>
+          ingredient.push(ingredientArr)
+        )
 
-        let ingredientsArr2 = oneRecipe.ingredients;
-        ingredientsArr2.forEach(ingredientArr2 => ingredients.push(ingredientArr2))
+        let ingredientsArr2 = oneRecipe.ingredients
+        ingredientsArr2.forEach((ingredientArr2) =>
+          ingredients.push(ingredientArr2)
+        )
       }
     }
 
     viewOneRecipe.innerHTML = `
     <div class="view-one-recipe-container">
       <button class="view-recipe-btn">&laquo; Back</button>
-      <div class="one-recipe-img-holder"><img src="${image}" alt="${recipeLabel}"></div>
-      <h2>${recipeLabel}</h2>
+      <div class="one-recipe-img-holder"><img src="${image}" alt="${recipeHeader}"></div>
+      <h2>${recipeHeader}</h2>
       <h4>Calories : ${calories}</h4>
       <h4>Cuisine : ${cuisine}</h4>
       <h4>${mealType}</h4>
