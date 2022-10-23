@@ -4,10 +4,44 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <meta name="description" content="v41 toucans team 02 project" />
+    <meta name="keywords" content="v41, toucans, team 02, project" />
+    <meta name="author" content="Hanna, Maxi & Ruben" />
+    <title>v41-toucans-team-02</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+
+    <button class="add-new">add new recipe</button>
+    <div class="new-recipe-container">
+      <div id="error-box">Complete all fields!</div>
+    </div>
+
+    <div id="mainRecipes">
+
+      <header>
+        <div id="search"></div>
+
+        <p id="recipe"></p>
+      </header>
+      <main>
+        <input
+          type="text"
+          id="searchBar"
+          placeholder="Search for a recipe"
+          class="search__search-bar"
+        />
+        
+        <div id="search__recipe-container"></div>
+      </main>
+
+    </div>
+    
+    <div class="recipe"></div>
+
+    <footer></footer>
+    
+    <script type="module" src="./search/search.js"></script>
+    <script type="module" src="addNew.js"></script>
+    
   </body>
 </html>
